@@ -1,0 +1,69 @@
+/*
+** CSS STYLESHEET
+** 
+** Author:      Arthur Clark
+** Date:        1/19/19
+** Filename:    style.css
+*/
+
+p {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: royalblue;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: lightslategray;
+  }
+
+.table_heading {
+    color: white;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.background {
+    background: steelblue;
+}
+
+.hpimage1 {
+    text-align: center;
+}
+
+#title_header {
+    color: white;
+    text-align: center;
+}
+
+#hpheader1 {
+    color: white;
+    padding: 20px;
+}
+
+#hpheader2 {
+    color: white;
+    padding: 20px;
+}
+
+#hpheader3 {
+    color: white;
+    padding: 20px;
+}

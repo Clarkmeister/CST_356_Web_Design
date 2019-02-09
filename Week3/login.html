@@ -1,0 +1,55 @@
+<!--
+    #   Filename:       login.html
+    #   Author:         Arthur Clark
+    #   Date:           1/19/19
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <!--removeIf(production)-->
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <!--endRemoveIf(production)-->
+        
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+    <body class="background">
+<ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="student.html">Student</a></li>
+        <li><a href="person.html">Person</a></li>  
+        <li><a href="login.html">Login</a></li>   
+</ul>
+<h1>Login</h1>
+<form>
+    <div class='formentry'>
+        Username: <input id='username' type='text'/>
+    <div>
+
+    <div class='formentry'>
+        Password: <input id="password" type='text'/>
+    </div>
+
+    <div class='formentry'>
+        <input id='submitbtn' type='button' value='Login'/>
+    </div>
+    <div id='error'></div>
+</form>
+
+    <!--removeIf(production)-->
+    <script src='js/login.js'></script>
+    <!--endRemoveIf(production)-->
+        
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <script>
+        $(document).ready(function() {
+            initializeLogin();
+        });
+    </script>
+
+</body>
+</html>

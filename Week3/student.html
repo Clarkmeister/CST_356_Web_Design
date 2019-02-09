@@ -1,0 +1,49 @@
+<!--
+    #   Filename:       student.html
+    #   Author:         Arthur Clark
+    #   Date:           1/19/19
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- inject:css -->
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <!-- endinject -->
+    </head>
+<body class="background">
+    <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="student.html">Student</a></li>
+            <li><a href="person.html">Person</a></li>  
+            <li><a href="login.html">Login</a></li>   
+    </ul>
+<div>
+    <h1>Student Page</h1>
+    <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+    </table>
+</div>
+    
+        <!-- inject:js -->
+        <!-- endinject -->
+
+        <!--removeIf(production)-->
+        <script src='./js/students.js'></script>
+        <!--endRemoveIf(production)-->
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                initializeStudents();
+            });
+        </script>
+
+</body>
+</html>

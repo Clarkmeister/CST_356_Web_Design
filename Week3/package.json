@@ -1,0 +1,32 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "description": "Lab Week 3",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Clarkmeister/CST_356_Web_Design.git"
+  },
+  "author": "Arthur Clark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clarkmeister/CST_356_Web_Design/issues"
+  },
+  "homepage": "https://github.com/Clarkmeister/CST_356_Web_Design#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-inject": "^5.0.2",
+    "gulp-remove-code": "^3.0.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

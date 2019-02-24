@@ -9,9 +9,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="student in students">
-                <td>{{ student.student_id }}</td>
-                <td>{{ student.email_address }}</td>
+            <tr v-for="student in students" :key="student.id">
+                <td>{{ student.id }}</td>
+                <td>{{ student.email }}</td>
             </tr>
         </tbody>
     </table>
@@ -19,21 +19,39 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+
     export default {
         name: 'Students',
-        mounted() {
-            this.students = getStudents();
-        },
+
         data () {
             return {
                 students: []
             }
+        },
+
+        methods: {
+            getStudents: function() {
+                // This wasn't working so I manually entered the URL (PRODUCT: undefined)
+                // This might cause problems for other users or server relaunches.
+                let studentsApi = "http://10.0.75.1:8081/api/students" 
+
+                Vue.axios.get(studentsApi).then(
+                    (response) => {
+                        console.log(response)
+                        this.students = response.data;
+                    },
+                    (error) => {
+                        console.log(error)
+                    }
+                );
+            }
+        },
+
+        mounted() {
+            this.getStudents();
         }
     }
-    function getStudents() {
-        return JSON.parse(testStudents).students;
-    }
-    var testStudents = '{"students":[{"student_id":"100000000","email_address":"jon.doe@oit.edu"},{"student_id":"100000001","email_address":"jane.doe@oit.edu"},{"student_id":"100000002","email_address":"jack.doe@oit.edu"},{"student_id":"100000003","email_address":"jill.doe@oit.edu"},{"student_id":"100000004","email_address": "jerry.doe@oit.edu"}]}'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
